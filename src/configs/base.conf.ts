@@ -3,7 +3,7 @@ export const base = {
     logLevel: 'info',
     bail: 0,
     framework: 'cucumber',
-    baseUrl: 'http://localhost',
+    baseUrl: 'http://adactin.com/HotelApp/index.php',
     waitforTimeout: 120000, // Default timeout for all waitFor* commands.
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
