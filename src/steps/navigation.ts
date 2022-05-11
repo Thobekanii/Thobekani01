@@ -1,6 +1,6 @@
 import { Given, Then } from "@cucumber/cucumber";
-import navpage from '..pages/page';
+import Page from "../pageobjects/page";
 
 Given(/^I navigate to AdactIn$/, async () => {
-await navpage.
+    await Page.open();
 });
