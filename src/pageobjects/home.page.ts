@@ -1,3 +1,4 @@
+
 class NavigationBar {
     logoutLink = $('//a[text()="Logout"]');
 

@@ -12,3 +12,18 @@ Then I verify user is logged in
 Examples:
     | username  |password  |
     | thobekani |qwertyuiop|
+
+
+@AdactInHotel @working
+Scenario Outline: To verify text box error messages TC-101-1
+
+Given I navigate to AdactIn
+Then I click login button
+Then I verify username error
+Then I enter username <username>
+Then I click login button
+Then I verify password error
+
+Examples:
+    | username  |
+    | thobekani |
