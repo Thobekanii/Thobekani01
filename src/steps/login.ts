@@ -17,3 +17,11 @@ Then(/^I click login button$/, async () => {
 Then(/^I verify user is logged in$/, async () => {
     await expect(NavigationBar.logoutLink.isExisting());
 });
+
+Then(/^I verify username error$/, async () => {
+    await LoginPage.validateUsernameErrorMessage();
+});
+
+Then(/^I verify password error$/, async () => {
+    await LoginPage.validatePasswordErrorMessage();
+});

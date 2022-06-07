@@ -33,7 +33,7 @@ export const base = {
         snippets: true,
         source: true,
         strict: false,
-        tagExpression: '',
+        tagExpression: '@working',
         timeout: 60000,
         ignoreUndefinedDefinitions: false
     },
