@@ -15,7 +15,7 @@ Then(/^I click login button$/, async () => {
 });
 
 Then(/^I verify user is logged in$/, async () => {
-    await expect(NavigationBar.logoutLink.isExisting());
+    await expect((await NavigationBar.logoutLink)).toHaveTextContaining("Logout");
 });
 
 Then(/^I verify username error$/, async () => {
@@ -24,4 +24,8 @@ Then(/^I verify username error$/, async () => {
 
 Then(/^I verify password error$/, async () => {
     await LoginPage.validatePasswordErrorMessage();
+});
+
+Then(/^I verify invalid login error$/, async () => {
+    await LoginPage.validateInvalidLoginErrorMessage();
 });

@@ -7,6 +7,7 @@ class LoginPage {
 
     usernameError = $('(//span[@class="login_error"])[1]');
     passwordError = $('(//span[@class="login_error"])[2]');
+    invalidLoginError = $('//div[@class="auth_error"]/b/.');
 
     public async login(username: string, password: string): Promise<void> {
         await this.inputUsername.setValue(username);
@@ -17,7 +18,7 @@ class LoginPage {
         await (await this.inputUsername).setValue(username);
     }
     public async typerPassword(password: string): Promise<void> {
-        await (await this.inputUsername).setValue(password);
+        await (await this.inputPassword).setValue(password);
     }
     public async clickLoginButton(): Promise<void> {
         await (await this.loginButton).waitForClickable();
@@ -31,6 +32,10 @@ class LoginPage {
     }
     public async validatePasswordErrorMessage():Promise<void>{
         await expect(await this.passwordError).toHaveTextContaining("Enter Password");
+    }
+
+    public async validateInvalidLoginErrorMessage():Promise<void>{
+        await expect(await this.invalidLoginError).toBeExisting();
     }
 }
 export default new LoginPage()
