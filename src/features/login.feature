@@ -1,6 +1,6 @@
 Feature: Account
 
-@AdactInHotel @working
+@AdactInHotel
 Scenario Outline: To verify valid login details TC-101
 
 Given I navigate to AdactIn
@@ -14,7 +14,7 @@ Examples:
     | thobekani |254500  |
 
 
-@AdactInHotel @working
+@AdactInHotel
 Scenario Outline: To verify text box error messages TC-101-1
 
 Given I navigate to AdactIn
@@ -28,7 +28,7 @@ Examples:
     | username  |
     | thobekani |
 
-@AdactInHotel @working
+@AdactInHotel
 Scenario Outline: Verify invalid login details TC-101-2
 
 Given I navigate to AdactIn
