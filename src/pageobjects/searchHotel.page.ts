@@ -1,5 +1,5 @@
 class SearchHotel {
-    
+
     locationList = $('#location');
     hotelsList = $('#hotels');
     roomTypes = $('#room_type');
@@ -39,6 +39,12 @@ class SearchHotel {
 
     public async selectChildrenPerRoom(childrenperperson: string) {
         await this.numberOfRooms.selectByVisibleText(childrenperperson);
+    }
+
+    public async getDate(day: number) {
+        const now = new Date();
+        now.setDate(now.getDate() + 7);
+        console.log("Ivelile ", now.toLocaleDateString());
     }
 }
 export default new SearchHotel();
